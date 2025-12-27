@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVON HERBAL CLEANER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+    --secondary: #28a745;
+    --light-bg: #f4f8fb;
+}
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fcfdfb;
+            color: #333;
+        }
+
+        .bg-soft {
+    background: linear-gradient(180deg, #f4f8fb, #ffffff);
+}
+
+
+        .custom-navbar {
+            background-color: #115ba4;  /* Bootstrap primary blue */
+        }
+
+        .nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+        .hero {
+            background:
+linear-gradient(120deg, rgba(17,91,164,0.85), rgba(40,167,69,0.75)),
+url("images/avonbg2.png");
+
+
+            background-repeat: no-repeat;   /* ❗ stops repeating */
+            background-size: cover;          /* ❗ fits section, not whole page */
+            background-position: center;     /* ❗ keeps image centered */
+
+            color: white;
+            padding: 80px 0;                 /* ❗ reduced height */
+            text-align: center;
+        }
+
+        .hero h1 {
+    font-size: 3.3rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    animation: fadeInDown 1s ease;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    opacity: 0.95;
+    max-width: 520px;
+    margin: 15px auto;
+    animation: fadeInUp 1.2s ease;
+}
+
+.hero .btn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+    transform: translateY(-3px);
+}
+
+
+        .hero img {
+            max-width: 380px;
+            width: 100%;
+            height: auto;
+
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+
+        .hero img {
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero img:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+
+
+        .section::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary);
+    margin: 0 auto 25px;
+    border-radius: 10px;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 70px;
+    height: 4px;
+    background: var(--secondary);
+    display: block;
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+
+
+        .section {
+            padding: 60px 0;
+        }
+        .feature-card {
+            background:   linear-gradient(180deg, #f4f8fb, #ffffff);
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(13,110,253,0.08), transparent);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.feature-card:hover::after {
+    opacity: 1;
+}
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+        }
+        .testimonial {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-left: 5px solid var(--secondary);
+}
+
+        .order-form {
+            background: linear-gradient(180deg, #ffffff, #f0f7ff);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: #115ba4;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                padding: 50px 0;
+            }
+            .order-form {
+                padding: 20px;
+            }
+            .hero img {
+                max-width: 240px;   /* smaller bottle on mobile */
+                margin-top: 20px;
+            }
+            .hero h1 {
+    font-size: 2.2rem;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
+        }
+
+        @keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatBottle {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.bottle-float {
+    animation: floatBottle 5s ease-in-out infinite;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">AVON HERBAL CLEANER</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#order">Order Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1>Discover the Power of Nature with AVON HERBAL CLEANER</h1>
+                    <p>Eco-friendly, effective, and safe for your home. Made from natural herbs for a deep, refreshing clean.</p>
+                    <p>Removes tough stains. Safe for everyday use. A powerful yet safe cleaning solution for Marbles, Motor Cycle, Furniture, Crockery, Silver, Car Interior, Glass, Brass.</p>
+                    <a href="#order" class="btn btn-light btn-lg">Order Now</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/bottle-avon1.jpg" alt="AVON Herbal Cleaner Bottle" class="bottle-float">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section bg-soft">
+        <div class="container">
+            <h2 class="section-title">Why Choose AVON HERBAL CLEANER?</h2>
+              <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Natural Ingredients" class="mb-3" style="width:100px; height:100px; border-radius:50%;">
+                        <h5>Natural Ingredients</h5>
+                        <p>Derived from organic herbs like aloe vera and eucalyptus for a safe, non-toxic clean.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Effective Cleaning" class="mb-3" style="width:100px; height:100px; border-radius:50%;">
+                        <h5>Powerful Cleaning</h5>
+                        <p>Removes tough stains, grease and grime without harsh chemicals, leaving surfaces sparkling.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Eco-Friendly" class="mb-3" style="width:100px; height:100px; border-radius:50%;">
+                        <h5>Eco-Friendly</h5>
+                        <p>Biodegradable formula that's kind to the planet and your family.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <img src="https://images.unsplash.com/photo-1673515336163-e988e60d099b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Eco-Friendly" class="mb-3" style="width:100px; height:100px; border-radius:50%;">
+                        <h5>How to Use</h5>
+                        <p>Dilute 6 caps in 1L water, apply on surface, wipe & enjoy shine.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonial">
+                        <p>"AVON Herbal Cleaner transformed my cleaning routine. It's natural and works wonders!"</p>
+                        <cite>- Sample Client Feedback</cite>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial">
+                        <p>"Safe for kids and pets, and the scent is amazing. Highly recommend!"</p>
+                        <cite>- Sample Client Feedback</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order/Payment Section -->
+    <section id="order" class="section bg-soft">
+        <div class="container">
+            <h2 class="section-title">Order Your AVON Herbal Cleaner Today</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="order-form">
+                        <p class="text-danger text-center fw-bold mb-3">
+    ⚠ This is a frontend demo order form. No real payment is processed.
+</p>
+
+                        <form id="orderForm">
+                            <div class="mb-3">
+                                <label for="product" class="form-label">Select Product</label>
+                                <select class="form-select" id="product" required>
+                                    <option value="standard">Standard Bottle (300ml) - Rs 499/-</option>
+                                    <option value="family">Smart Pack (2x300ml) - Rs 500</option>
+                                    <option value="bulk">Bulk Pack (5x500ml) - Rs 500</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="quantity" class="form-label">Quantity</label>
+                                <input type="number" class="form-control" id="quantity" min="1" value="1" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Shipping Address</label>
+                                <textarea class="form-control" id="address" rows="3" required></textarea>
+                            </div>
+                            <h5>Payment Details</h5>
+                            <div class="mb-3">
+                                <label for="cardNumber" class="form-label">Card Number</label>
+                                <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="expiry" class="form-label">Expiry Date</label>
+                                    <input type="text" class="form-control" id="expiry" placeholder="MM/YY" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="cvv" class="form-label">CVV</label>
+                                    <input type="text" class="form-control" id="cvv" placeholder="123" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-lg w-100">Place Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+<section id="contact" class="section">
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+
+        <div class="row">
+            <!-- Contact Info -->
+            <div class="col-md-5 mb-4">
+                <h5>Get in Touch</h5>
+                <p>If you have any questions, bulk order enquiries, or need support, feel free to contact us.</p>
+
+                <p><strong>Address:</strong><br>
+                   AVON Herbal Cleaner<br>
+                   Chandigarh, India
+                </p>
+
+                <p><strong>Phone:</strong> +91 9XXXXXXXXX</p>
+                <p><strong>Email:</strong> support@avoncleaner.com</p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-md-7">
+                <div class="order-form">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Your Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 AVON Herbal Cleaner. All rights reserved. | <a href="privacy.html" class="text-light" target="_blank">Privacy Policy</a></p>
+            <p class="mt-2 small">
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Order submitted successfully! (This is a demo. In a real site, this would process payment and send confirmation.)');
+            // In a real implementation, send data to a server (e.g., via fetch() to an API).
+        });
+    </script>
+</body>
+</html>
